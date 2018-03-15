@@ -64,7 +64,7 @@
         <findbugs.threshold>Low</findbugs.threshold>
     </properties>
     <name>${extension.name} API</name>
-    <description>Project GlassFish Enterprise JavaBean API</description>
+    <description>Java APIs for XML based RPC</description>
     
     <organization>
         <name>Oracle Corporation</name>
