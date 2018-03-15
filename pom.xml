@@ -64,36 +64,28 @@
         <findbugs.threshold>Low</findbugs.threshold>
     </properties>
     <name>${extension.name} API</name>
-    <description>Project GlassFish Enterprise JavaBean API</description>
+    <description>Java APIs for XML based RPC</description>
     
-    <url>http://metro.java.net/</url>
-
     <organization>
-        <name>GlassFish Community</name>
-        <url>https://glassfish.java.net</url>
+        <name>Oracle Corporation</name>
+        <url>http://www.oracle.com</url>
     </organization>
     <licenses>
         <license>
             <name>CDDL + GPLv2 with classpath exception</name>
-            <url>https://glassfish.dev.java.net/nonav/public/CDDL+GPL.html</url>
+            <url>https://oss.oracle.com/licenses/CDDL+GPL-1.1</url>
             <distribution>repo</distribution>
             <comments>A business-friendly OSS license</comments>
         </license>
     </licenses>
     <issueManagement>
-        <system>jira</system>
-        <url>http://java.net/jira/browse/METRO</url>
+        <system>GitHub</system>
+        <url>https://github.com/javaee/javax.xml.rpc/issues</url>
     </issueManagement>
-    <mailingLists>
-        <mailingList>
-            <name>Metro Developer</name>
-            <archive>users@metro.java.net  </archive>
-        </mailingList>
-    </mailingLists>
     <scm>
-        <connection>scm:svn:https://svn.java.net/svn/glassfish~svn/trunk/api/javaee-api/javax.xml.rpc</connection>
-        <developerConnection>scm:svn:https://svn.java.net/svn/glassfish~svn/trunk/api/javaee-api/javax.xml.rpc</developerConnection>
-        <url>http://java.net/projects/glassfish/sources/svn/show/trunk/api/javaee-api/javax.xml.rpc</url>
+        <connection>scm:git:https://github.com/javaee/javax.xml.rpc</connection>
+        <developerConnection>scm:git:git@github.com:javaee/javax.xml.rpc</developerConnection>
+        <url>https://github.com/javaee/javax.xml.rpc</url>
     </scm>
 
     <build>
@@ -282,6 +274,20 @@
                         </plugins>                        
                     </reporting>
                 </configuration>
+            </plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-gpg-plugin</artifactId>
+                <version>1.6</version>
+                <executions>
+                    <execution>
+                        <id>sign-artifacts</id>
+                        <phase>verify</phase>
+                        <goals>
+                            <goal>sign</goal>
+                        </goals>
+                    </execution>
+                </executions>
             </plugin>
         </plugins>
     </build>
